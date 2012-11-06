@@ -1,8 +1,8 @@
 package ar.edu.unlam.tallerweb.ecuaciones;
 
 /**
- * AbstracciÃ³n que representa todo tipo de ecuaciÃ³n con
- * una incÃ³gnita
+ * Abstracción que representa todo tipo de ecuación con
+ * una incógnita
  *
  */
 public interface Ecuacion {
@@ -14,5 +14,5 @@ public interface Ecuacion {
 	 *
 	 */
 	Double resolver(Double x);
-
+	
 }

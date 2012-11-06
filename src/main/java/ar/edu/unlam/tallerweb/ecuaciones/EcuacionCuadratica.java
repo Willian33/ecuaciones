@@ -1,8 +1,8 @@
 package ar.edu.unlam.tallerweb.ecuaciones;
 
 /**
- * Representa una ecuaciÃ³n cuadrÃ¡tica del tipo
- * f(x) = a Ã— x^2 + b Ã— x + c
+ * Representa una ecuación cuadrática del tipo
+ * f(x) = a × x^2 + b × x + c
  *
  */
 public class EcuacionCuadratica implements Ecuacion {
@@ -15,10 +15,18 @@ public class EcuacionCuadratica implements Ecuacion {
 	 * @param c
 	 *
 	 */
+	
+	private Double a;
+	private Double b;
+	private Double c;
+	
 	public EcuacionCuadratica(Double a, Double b, Double c) {
-
-		throw new RuntimeException("No implementado");
-
+		if((a == null) || (a == 0) || (b == null) || (c == null)){
+			throw new RuntimeException("No implementado");
+		}
+		this.a = a.doubleValue();
+		this.b = b.doubleValue();
+		this.c = c.doubleValue();
 	}
 
 	/**
@@ -28,9 +36,10 @@ public class EcuacionCuadratica implements Ecuacion {
 	 *
 	 */
 	public Double resolver(Double x) {
-
-		throw new RuntimeException("No implementado");
-
+		Double resultadoEcuacion = (this.a * Math.pow(x.doubleValue(), 2)) + (this.b * x.doubleValue()) + this.c.doubleValue();
+		if (x == null){
+			throw new RuntimeException("No implementado");
+		}
+		return resultadoEcuacion.doubleValue();
 	}
-
 }
