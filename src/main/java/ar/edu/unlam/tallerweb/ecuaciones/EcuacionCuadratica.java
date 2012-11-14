@@ -36,7 +36,7 @@ public class EcuacionCuadratica implements Ecuacion {
 	 *
 	 */
 	public Double resolver(Double x) {
-		Double resultadoEcuacion = (this.a * Math.pow(x.doubleValue(), 2)) + (this.b * x.doubleValue()) + this.c.doubleValue();
+		Double resultadoEcuacion = (this.a.doubleValue() * Math.pow(x.doubleValue(), 2)) + (this.b.doubleValue() * x.doubleValue()) + this.c.doubleValue();
 		if (x == null){
 			throw new RuntimeException("No implementado");
 		}

@@ -38,14 +38,4 @@ public class EcuacionLineal implements Ecuacion {
 		Double resultadoEcuacion = (this.m.doubleValue() * x.doubleValue()) + this.b.doubleValue();
 		return resultadoEcuacion;
 	}
-
-	public Double getB() {
-		return b;
-	}
-
-	public Double getM() {
-		return m;
-	}
-	
-	
 }

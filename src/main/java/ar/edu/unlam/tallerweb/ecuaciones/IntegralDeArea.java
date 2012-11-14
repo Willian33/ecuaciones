@@ -19,12 +19,17 @@ public class IntegralDeArea {
 	 */
 	
 	public Double calcular(Ecuacion ecuacion, Double inicio,Double fin, Double incremento) {
-		EcuacionLineal ecuacionLineal = (EcuacionLineal) ecuacion;
-		if((ecuacion == null) || (inicio == null) || (fin == null) || (incremento == null)){
-			throw new RuntimeException("No implementado");
+		
+		double resultado = 0.0;	
+		double delta = (fin - inicio) / incremento;
+		double semiIncremento = incremento/2;
+		double valorX = inicio;
+		for (int i = 0; i < incremento; i++)
+		{
+			resultado += delta * ecuacion.resolver(valorX + semiIncremento);
+			valorX += delta;
 		}
-		Double resultadoEcuacion = (ecuacionLineal.getM().doubleValue()*((Math.pow(fin.doubleValue(), 2))/2) + ecuacionLineal.getB().doubleValue() * fin.doubleValue()) - (ecuacionLineal.getM().doubleValue()*((Math.pow(inicio.doubleValue(), 2))/2) + ecuacionLineal.getB().doubleValue() * inicio.doubleValue());
-		return resultadoEcuacion;
+		
+		return resultado;
 	}
-
 }

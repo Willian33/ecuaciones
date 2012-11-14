@@ -48,7 +48,7 @@ public class EcuacionPolinomica implements Ecuacion {
 			throw new RuntimeException("No implementado");
 		}
 		for(int i = 0; i < this.coeficientes.size(); i++){
-			resultadoEcuacion += this.coeficientes.get(i) * Math.pow(x.doubleValue(), i) ;
+			resultadoEcuacion += this.coeficientes.get(i).doubleValue() * Math.pow(x.doubleValue(), i) ;
 		}
 		
 		return resultadoEcuacion.doubleValue();
