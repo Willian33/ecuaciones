@@ -7,18 +7,13 @@ import junit.framework.Assert;
 
 import org.junit.Test;
 
-/**
+/*
  * Agregue los tests que considere necesarios. Se proporciona un test
  * a modo de testigo.
  *
  */
 public class EcuacionTest {
 
-	/*@Test
-	public void test() {
-		fail("No implementado");
-	}*/
-	
 	@Test
 	public void probarQueSePuedaCrearUnaEcuacionLineal(){
 		EcuacionLineal ecuacionLineal1 = new EcuacionLineal(5.0 , 2.0);

@@ -2,14 +2,14 @@ package ar.edu.unlam.tallerweb.ecuaciones;
 
 import java.util.List;
 
-/**
+/*
  * Representa una ecuación polinómica del tipo
  * f(x) = n + (n-1) × x + (n-2) × x^2 + ...
  *
  */
 public class EcuacionPolinomica implements Ecuacion {
 
-	/**
+	/*
 	 * Constructor parametrizado
 	 *
 	 * @param coeficientes siendo coeficientes[0] el valor que
@@ -26,9 +26,7 @@ public class EcuacionPolinomica implements Ecuacion {
 	 * f(x) = 1 × x^0 + 0 × x^1 + 2 × x^2 + 1 × x^3 - 1 × x^4
 	 *
 	 */
-	
-	private List<Double> coeficientes;
-	
+	final private List<Double> coeficientes;
 	public EcuacionPolinomica(List<Double> coeficientes) {
 		if(coeficientes == null){
 			throw new RuntimeException("No implementado");
@@ -36,13 +34,13 @@ public class EcuacionPolinomica implements Ecuacion {
 		this.coeficientes = coeficientes;
 	}
 
-	/**
+	/*
 	 * Devuelve el resultado de evaluar f(x)
 	 *
 	 * @param x la variable
 	 *
 	 */
-	public Double resolver(Double x) {
+	final public Double resolver(final Double x){
 		Double resultadoEcuacion = 0.0;
 		if (x == null){
 			throw new RuntimeException("No implementado");
@@ -50,7 +48,6 @@ public class EcuacionPolinomica implements Ecuacion {
 		for(int i = 0; i < this.coeficientes.size(); i++){
 			resultadoEcuacion += this.coeficientes.get(i).doubleValue() * Math.pow(x.doubleValue(), i) ;
 		}
-		
 		return resultadoEcuacion.doubleValue();
 	}
 
