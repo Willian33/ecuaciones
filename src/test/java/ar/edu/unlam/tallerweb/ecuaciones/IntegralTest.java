@@ -27,5 +27,4 @@ public class IntegralTest {
 				"Se espera que el área bajo la recta identidad entre 0 y 1 sea 1/2",
 				areaEsperada, areaObtenida.doubleValue(), precision);
 	}
-
 }
