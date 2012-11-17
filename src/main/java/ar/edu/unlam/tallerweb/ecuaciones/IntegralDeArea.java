@@ -19,6 +19,9 @@ public class IntegralDeArea {
 	 */
 
 	public final Double calcular(final Ecuacion ecuacion, final Double inicio, final Double fin, final Double incremento) {
+		if (fin.doubleValue() < inicio.doubleValue()) {
+			throw new RuntimeException("No implementado");
+		}
 		double resultado = 0.0;
 		double semiIncremento = incremento / 2;
 		double valorX = inicio;
