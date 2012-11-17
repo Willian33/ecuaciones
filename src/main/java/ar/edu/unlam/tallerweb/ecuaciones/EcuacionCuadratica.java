@@ -37,8 +37,9 @@ public class EcuacionCuadratica implements Ecuacion {
 	 */
 	public final Double resolver(final Double x) {
 		double valorX = this.valorB.doubleValue() * x.doubleValue();
-		double valorX2 = this.valorA.doubleValue() * Math.pow(x.doubleValue(), 2);
-		Double resultadoEcuacion = valorX2 + valorX + this.valorC.doubleValue();
-		return resultadoEcuacion.doubleValue();
+		double x2 = Math.pow(x.doubleValue(), 2);
+		double valorX2 = this.valorA.doubleValue() * x2;
+		Double resultado = valorX2 + valorX + this.valorC.doubleValue();
+		return resultado.doubleValue();
 	}
 }

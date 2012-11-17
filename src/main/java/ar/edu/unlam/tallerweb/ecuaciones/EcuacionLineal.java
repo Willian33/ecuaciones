@@ -34,7 +34,7 @@ public class EcuacionLineal implements Ecuacion {
 			throw new RuntimeException("No implementado");
 		}
 		double valorX =  this.valorM.doubleValue() * x.doubleValue();
-		Double resultadoEcuacion = valorX + this.valorB.doubleValue();
-		return resultadoEcuacion;
+		Double resultado = valorX + this.valorB.doubleValue();
+		return resultado;
 	}
 }
