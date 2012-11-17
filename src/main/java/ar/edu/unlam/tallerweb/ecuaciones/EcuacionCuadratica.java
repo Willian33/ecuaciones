@@ -27,7 +27,6 @@ public class EcuacionCuadratica implements Ecuacion {
 		}
 		this.valorB = b.doubleValue();
 		this.valorC = c.doubleValue();
-		
 	}
 
 	/*
@@ -37,7 +36,9 @@ public class EcuacionCuadratica implements Ecuacion {
 	 *
 	 */
 	public final Double resolver(final Double x) {
-		Double resultadoEcuacion = (this.valorA.doubleValue() * Math.pow(x.doubleValue(), 2)) + (this.valorB.doubleValue() * x.doubleValue()) + this.valorC.doubleValue();
+		double valorX = this.valorB.doubleValue() * x.doubleValue();
+		double valorX2 = this.valorA.doubleValue() * Math.pow(x.doubleValue(), 2);
+		Double resultadoEcuacion = valorX2 + valorX + this.valorC.doubleValue();
 		return resultadoEcuacion.doubleValue();
 	}
 }

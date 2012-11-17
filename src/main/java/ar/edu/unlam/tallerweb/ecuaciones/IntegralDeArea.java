@@ -23,8 +23,9 @@ public class IntegralDeArea {
 		double semiIncremento = incremento / 2;
 		double valorX = inicio;
 		double cantidadIteraciones = (fin - inicio) / incremento;
-		for (int i = 0; i < cantidadIteraciones; i++){
-			resultado += Math.abs(incremento * ecuacion.resolver(valorX + semiIncremento));
+		for (int i = 0; i < cantidadIteraciones; i++) {
+			double fx = valorX + semiIncremento;
+			resultado += Math.abs(incremento * ecuacion.resolver(fx));
 			valorX += incremento;
 		}
 		return resultado;

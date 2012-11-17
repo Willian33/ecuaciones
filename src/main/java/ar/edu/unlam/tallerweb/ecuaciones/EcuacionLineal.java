@@ -17,7 +17,7 @@ public class EcuacionLineal implements Ecuacion {
 	private Double valorM;
 	private Double valorB;
 	public EcuacionLineal(final Double m, final Double b) {
-		if ((m == null) || (b == null)){
+		if ((m == null) || (b == null)) {
 			throw new RuntimeException("No implementado");
 		}
 		this.valorM = m.doubleValue();
@@ -33,7 +33,8 @@ public class EcuacionLineal implements Ecuacion {
 		if (x == null) {
 			throw new RuntimeException("No implementado");
 		}
-		Double resultadoEcuacion = (this.valorM.doubleValue() * x.doubleValue()) + this.valorB.doubleValue();
+		double valorX =  this.valorM.doubleValue() * x.doubleValue();
+		Double resultadoEcuacion = valorX + this.valorB.doubleValue();
 		return resultadoEcuacion;
 	}
 }
