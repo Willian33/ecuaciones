@@ -18,7 +18,8 @@ public class EcuacionCuadratica implements Ecuacion {
 	private Double valorA = 0.0;
 	private Double valorB;
 	private Double valorC;
-	public EcuacionCuadratica(final Double a, final Double b, final Double c) {
+	public EcuacionCuadratica(final Double a,
+			final Double b, final Double c) {
 		if ((b == null) || (c == null)) {
 			throw new RuntimeException("No implementado");
 		}
