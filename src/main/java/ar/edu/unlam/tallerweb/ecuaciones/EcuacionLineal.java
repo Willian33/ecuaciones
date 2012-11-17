@@ -14,15 +14,14 @@ public class EcuacionLineal implements Ecuacion {
 	 *
 	 */
 
-	private Double m;
-	private Double b;
+	private Double valorM;
+	private Double valorB;
 	public EcuacionLineal(final Double m, final Double b) {
-		if ((m == null) || (b == null))
-		{
+		if ((m == null) || (b == null)){
 			throw new RuntimeException("No implementado");
 		}
-		this.m = m.doubleValue();
-		this.b = b.doubleValue();
+		this.valorM = m.doubleValue();
+		this.valorB = b.doubleValue();
 	}
 	/*
 	 * Devuelve el resultado de evaluar f(x)
@@ -30,11 +29,11 @@ public class EcuacionLineal implements Ecuacion {
 	 * @param x la variable
 	 *
 	 */
-	final public Double resolver(final Double x) {
-		if (x == null){
+	public final Double resolver(final Double x) {
+		if (x == null) {
 			throw new RuntimeException("No implementado");
 		}
-		Double resultadoEcuacion = (this.m.doubleValue() * x.doubleValue()) + this.b.doubleValue();
+		Double resultadoEcuacion = (this.valorM.doubleValue() * x.doubleValue()) + this.valorB.doubleValue();
 		return resultadoEcuacion;
 	}
 }

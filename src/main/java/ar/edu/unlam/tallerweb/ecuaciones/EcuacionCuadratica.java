@@ -15,18 +15,19 @@ public class EcuacionCuadratica implements Ecuacion {
 	 * @param c
 	 *
 	 */
-	
-	private Double a;
-	private Double b;
-	private Double c;
-	
-	public EcuacionCuadratica(final Double a, final Double b, final Double c){
-		if((a == null) || (a == 0) || (b == null) || (c == null)){
+	private Double valorA = 0.0;
+	private Double valorB;
+	private Double valorC;
+	public EcuacionCuadratica(final Double a, final Double b, final Double c) {
+		if ((b == null) || (c == null)) {
 			throw new RuntimeException("No implementado");
 		}
-		this.a = a.doubleValue();
-		this.b = b.doubleValue();
-		this.c = c.doubleValue();
+		if (a != null) {
+			this.valorA = a.doubleValue();
+		}
+		this.valorB = b.doubleValue();
+		this.valorC = c.doubleValue();
+		
 	}
 
 	/*
@@ -35,8 +36,8 @@ public class EcuacionCuadratica implements Ecuacion {
 	 * @param x la variable
 	 *
 	 */
-	final public Double resolver(final Double x) {
-		Double resultadoEcuacion = (this.a.doubleValue() * Math.pow(x.doubleValue(), 2)) + (this.b.doubleValue() * x.doubleValue()) + this.c.doubleValue();
+	public final Double resolver(final Double x) {
+		Double resultadoEcuacion = (this.valorA.doubleValue() * Math.pow(x.doubleValue(), 2)) + (this.valorB.doubleValue() * x.doubleValue()) + this.valorC.doubleValue();
 		return resultadoEcuacion.doubleValue();
 	}
 }

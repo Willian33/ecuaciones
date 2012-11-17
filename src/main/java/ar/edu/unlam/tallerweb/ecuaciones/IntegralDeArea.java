@@ -18,13 +18,12 @@ public class IntegralDeArea {
 	 * @return el área bajo la curva
 	 */
 
-	final public Double calcular(final Ecuacion ecuacion, final Double inicio, final Double fin, final Double incremento) {
-		double resultado = 0.0;	
-		double semiIncremento = incremento/2;
+	public final Double calcular(final Ecuacion ecuacion, final Double inicio, final Double fin, final Double incremento) {
+		double resultado = 0.0;
+		double semiIncremento = incremento / 2;
 		double valorX = inicio;
 		double cantidadIteraciones = (fin - inicio) / incremento;
-		for (int i = 0; i < cantidadIteraciones; i++)
-		{
+		for (int i = 0; i < cantidadIteraciones; i++){
 			resultado += Math.abs(incremento * ecuacion.resolver(valorX + semiIncremento));
 			valorX += incremento;
 		}

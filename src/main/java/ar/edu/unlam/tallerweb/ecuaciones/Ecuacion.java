@@ -14,5 +14,4 @@ public interface Ecuacion {
 	 *
 	 */
 	Double resolver(Double x);
-	
 }
